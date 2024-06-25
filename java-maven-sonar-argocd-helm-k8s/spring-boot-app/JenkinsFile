@@ -32,10 +32,9 @@ pipeline {
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "monish247/myprojects:${BUILD_NUMBER}"
-        DOCKER_HUB_TOKEN = credentials('docker-hub-token-id')
+        DOCKER_HUB_TOKEN = credentials('DOCKER_HUB_TOKEN')
 
         // DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
-        REGISTRY_CREDENTIALS = credentials('docker-hub-token-id')
       }
       steps {
        script {
