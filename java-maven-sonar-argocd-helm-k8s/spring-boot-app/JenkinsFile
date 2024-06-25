@@ -35,7 +35,7 @@ pipeline {
         DOCKER_HUB_TOKEN = credentials('docker-hub-token-id')
 
         // DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
-        REGISTRY_CREDENTIALS = credentials('docker-cred')
+        REGISTRY_CREDENTIALS = credentials('docker-hub-token-id')
       }
       steps {
        script {
